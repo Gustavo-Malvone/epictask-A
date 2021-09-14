@@ -44,8 +44,7 @@ public class ApiTaskController {
 		
 		if (title == null)
 			return repository.findAll(pageable);
-		
-		//TODO usar contains
+
 		return repository.findByTitleLike("%" + title + "%", pageable);
 	}
 	

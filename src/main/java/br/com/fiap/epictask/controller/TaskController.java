@@ -32,6 +32,7 @@ public class TaskController {
 	@PostMapping("/task")
 	public String save(@Valid Task task, BindingResult result) {
 		if (result.hasErrors()) return "task-form";
+		System.out.println("chegou");
 		repository.save(task);
 		return "tasks";
 	}

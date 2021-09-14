@@ -5,6 +5,12 @@ CREATE TABLE task(
 	points int
 );
 
+CREATE TABLE user(
+    id int PRIMARY KEY auto_increment,
+    name varchar(255),
+    email varchar(255),
+    password varchar(255)
+);
 
 INSERT INTO task VALUES(
 	1, 
@@ -15,7 +21,7 @@ INSERT INTO task VALUES(
 
 INSERT INTO task VALUES(
 	2, 
-	'Prototição da aplicação', 
+	'Prototipação da aplicação',
 	'Definição do protótipo da interface gráfica', 
 	100
 );
@@ -25,4 +31,25 @@ INSERT INTO task VALUES(
 	'API REST', 
 	'Criação de API para serviços de endpoint', 
 	80
+);
+
+INSERT INTO user VALUES(
+    1,
+    'Maria',
+    'maria@fiap.com.br',
+    '123456789'
+);
+
+INSERT INTO user VALUES(
+    2,
+    'André',
+    'andre@fiap.com.br',
+    '987654321'
+);
+
+INSERT INTO user VALUES(
+    3,
+    'Camila',
+    'camila@fiap.com.br',
+    '159487263'
 );
